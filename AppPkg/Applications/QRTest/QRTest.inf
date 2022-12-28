@@ -33,13 +33,18 @@
   StdLib/StdLib.dec   
   MdePkg/MdePkg.dec
   ShellPkg/ShellPkg.dec 
-
+  MdeModulePkg/MdeModulePkg.dec
+  ShellPkg/ShellPkg.dec
+  CryptoPkg/CryptoPkg.dec
+  SecurityPkg/SecurityPkg.dec
 
 [LibraryClasses]
   LibC
   LibStdio
   ShellCEntryLib   
   ShellLib
+  BaseCryptLib
+  Tpm2CommandLib
 
 [Protocols]
 	
