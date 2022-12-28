@@ -116,7 +116,7 @@ QuickSortWorker (
 //
 
 char *
-strchr (
+strchr_s (
   const char  *str,
   int         ch
   )
@@ -126,7 +126,7 @@ strchr (
 
 /* Scan a string for the last occurrence of a character */
 char *
-strrchr (
+strrchr_c (
   const char  *str,
   int         c
   )
@@ -146,7 +146,7 @@ strrchr (
 
 /* Compare first n bytes of string s1 with string s2, ignoring case */
 int
-strncasecmp (
+strncasecmp_c (
   const char  *s1,
   const char  *s2,
   size_t      n
@@ -177,7 +177,7 @@ strncasecmp (
 
 /* Read formatted data from a string */
 int
-sscanf (
+sscanf_c (
   const char  *buffer,
   const char  *format,
   ...
@@ -192,7 +192,7 @@ sscanf (
 
 /* Maps errnum to an error-message string */
 char *
-strerror (
+strerror_c (
   int  errnum
   )
 {
@@ -202,7 +202,7 @@ strerror (
 /* Computes the length of the maximum initial segment of the string pointed to by s1
    which consists entirely of characters from the string pointed to by s2. */
 size_t
-strspn (
+strspn_c (
   const char  *s1,
   const char  *s2
   )
@@ -236,7 +236,7 @@ strspn (
 /* Computes the length of the maximum initial segment of the string pointed to by s1
    which consists entirely of characters not from the string pointed to by s2. */
 size_t
-strcspn (
+strcspn_c (
   const char  *s1,
   const char  *s2
   )
@@ -266,7 +266,7 @@ strcspn (
 }
 
 char *
-strcpy (
+strcpy_c (
   char        *strDest,
   const char  *strSource
   )
@@ -281,7 +281,7 @@ strcpy (
 
 /* Determines if a particular character is a decimal-digit character */
 int
-isdigit (
+isdigit_c (
   int  c
   )
 {
@@ -293,7 +293,7 @@ isdigit (
 
 /* Determine if an integer represents character that is a hex digit */
 int
-isxdigit (
+isxdigit_c (
   int  c
   )
 {
@@ -307,7 +307,7 @@ isxdigit (
 
 /* Determines if a particular character represents a space character */
 int
-isspace (
+isspace_c (
   int  c
   )
 {
@@ -319,7 +319,7 @@ isspace (
 
 /* Determine if a particular character is an alphanumeric character */
 int
-isalnum (
+isalnum_c (
   int  c
   )
 {
@@ -333,7 +333,7 @@ isalnum (
 
 /* Determines if a particular character is in upper case */
 int
-isupper (
+isupper_c (
   int  c
   )
 {
@@ -349,7 +349,7 @@ isupper (
 
 /* Convert strings to a long-integer value */
 long
-strtol (
+strtol_c (
   const char  *nptr,
   char        **endptr,
   int         base
@@ -364,7 +364,7 @@ strtol (
 
 /* Convert strings to an unsigned long-integer value */
 unsigned long
-strtoul (
+strtoul_c (
   const char  *nptr,
   char        **endptr,
   int         base
@@ -379,7 +379,7 @@ strtoul (
 
 /* Convert character to lowercase */
 int
-tolower (
+tolower_c (
   int  c
   )
 {
@@ -396,7 +396,7 @@ tolower (
 
 /* Performs a quick sort */
 void
-qsort (
+qsort_c (
   void *base,
   size_t num,
   size_t width,
@@ -429,7 +429,7 @@ qsort (
 
 /* Get a value from the current environment */
 char *
-getenv (
+getenv_c (
   const char  *varname
   )
 {
@@ -462,7 +462,7 @@ secure_getenv (
 
 /* Write data to a stream */
 size_t
-fwrite (
+fwrite_c (
   const void  *buffer,
   size_t      size,
   size_t      count,
@@ -531,7 +531,7 @@ abort (
 #else
 
 void
-abort (
+abort_c (
   void
   )
 {
@@ -541,7 +541,7 @@ abort (
 #endif
 
 int
-fclose (
+fclose_c (
   FILE  *f
   )
 {
@@ -549,7 +549,7 @@ fclose (
 }
 
 FILE *
-fopen (
+fopen_c (
   const char  *c,
   const char  *m
   )
@@ -558,7 +558,7 @@ fopen (
 }
 
 size_t
-fread (
+fread_c(
   void    *b,
   size_t  c,
   size_t  i,
@@ -569,7 +569,7 @@ fread (
 }
 
 uid_t
-getuid (
+getuid_c (
   void
   )
 {
@@ -577,7 +577,7 @@ getuid (
 }
 
 uid_t
-geteuid (
+geteuid_c (
   void
   )
 {
@@ -585,7 +585,7 @@ geteuid (
 }
 
 gid_t
-getgid (
+getgid_c (
   void
   )
 {
@@ -593,7 +593,7 @@ getgid (
 }
 
 gid_t
-getegid (
+getegid_c (
   void
   )
 {
@@ -601,7 +601,7 @@ getegid (
 }
 
 int
-printf (
+printf_c (
   char const  *fmt,
   ...
   )

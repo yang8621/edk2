@@ -28,7 +28,7 @@ typedef struct {
 
 /* Allocates memory blocks */
 void *
-malloc (
+malloc_c (
   size_t  size
   )
 {
@@ -61,7 +61,7 @@ malloc (
 
 /* Reallocate memory blocks */
 void *
-realloc (
+realloc_c (
   void    *ptr,
   size_t  size
   )
@@ -104,7 +104,7 @@ realloc (
 
 /* De-allocates or frees a memory block */
 void
-free (
+free_c (
   void  *ptr
   )
 {

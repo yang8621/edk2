@@ -35,7 +35,7 @@ memcpy (
 #else
 /* Copies bytes between buffers */
 void *
-memcpy (
+memcpy_s (
   void          *dest,
   const void    *src,
   unsigned int  count

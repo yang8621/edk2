@@ -84,7 +84,7 @@ IsLeap (
 //  INTN *timer
 //  )
 time_t
-time (
+time_c (
   time_t  *timer
   )
 {
@@ -131,7 +131,7 @@ time (
 // Convert a time value from type time_t to struct tm.
 //
 struct tm *
-gmtime (
+gmtime_c (
   const time_t  *timer
   )
 {
